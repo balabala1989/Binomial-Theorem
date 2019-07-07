@@ -1,0 +1,51 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="BinomialTheorem.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="768"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Height="80" HorizontalAlignment="Left" Margin="8,19,0,0" Name="title" Text="Binomial Theorem" VerticalAlignment="Top" Width="460" TextAlignment="Center" FontFamily="VIVALDII.TTF#Vivaldi" FontSize="66"/>
+        <TextBox Height="74" HorizontalAlignment="Left" Margin="18,180,0,0" Name="aText" Text="Enter 'a'" VerticalAlignment="Top" Width="140" MouseLeftButtonDown="aText_MouseLeftButtonDown" LostFocus="aText_LostFocus" InputScope="Digits" />
+        <TextBox Height="74" HorizontalAlignment="Left" Margin="176,180,0,0" Name="bText" Text="Enter 'b'" VerticalAlignment="Top" Width="140" MouseLeftButtonDown="bText_MouseLeftButtonDown" LostFocus="bText_LostFocus" InputScope="Digits" />
+        <TextBox Height="74" HorizontalAlignment="Left" Margin="331,180,0,0" Name="nText" Text="Enter 'n'" VerticalAlignment="Top" Width="140" MouseLeftButtonDown="nText_MouseLeftButtonDown" LostFocus="nText_LostFocus" InputScope="Digits" />
+        <ScrollViewer Height="312" HorizontalAlignment="Left" Margin="18,348,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="450">
+           
+            </ScrollViewer>
+        <TextBlock Height="59" HorizontalAlignment="Left" Margin="34,119,0,0" Name="aTextBlock" Text="a" VerticalAlignment="Top" Width="41" FontFamily="MTCORSVA.TTF#Monotype Corsiva" FontSize="55"/>
+        <TextBlock Height="59" HorizontalAlignment="Left" Margin="197,119,0,0" Name="bTextBlock" Text="b" VerticalAlignment="Top" Width="41" FontFamily="MTCORSVA.TTF#Monotype Corsiva" FontSize="55" />
+        <TextBlock Height="59" HorizontalAlignment="Left" Margin="345,119,0,0" Name="nTextBlock" Text="n" VerticalAlignment="Top" Width="41" FontFamily="MTCORSVA.TTF#Monotype Corsiva" FontSize="55" />
+        <TextBlock Height="63" HorizontalAlignment="Left" Margin="35,269,0,0" Name="abnTextBlock" Text="(aX+bY)^n" VerticalAlignment="Top" Width="245" FontFamily="MTCORSVA.TTF#Monotype Corsiva" FontSize="55" />
+        <Button Content=" Generate " Height="71" HorizontalAlignment="Left" Margin="21,678,0,0" Name="generateButton" VerticalAlignment="Top" Width="177" Style="{StaticResource mainButton}" FontFamily="FREESCPT.TTF#Freestyle Script" FontSize="60" Click="generateButton_Click" />
+        <Button Content=" Reset " Height="71" HorizontalAlignment="Left" Margin="217,678,0,0" Name="resetButton" VerticalAlignment="Top" Width="129" Style="{StaticResource mainButton}" FontFamily="FREESCPT.TTF#Freestyle Script" FontSize="60" Click="resetButton_Click" />
+        <Button Content="" Height="83" HorizontalAlignment="Left" Margin="354,666,0,0" Name="helpButton" VerticalAlignment="Top" Width="103" Style="{StaticResource NextButton}" Click="helpButton_Click" />
+        <TextBlock Height="135" HorizontalAlignment="Left" Margin="40,439,0,0" Name="errorMsg" Text=" Please Enter a Proper Number!!!" VerticalAlignment="Top" Width="411" Visibility="Collapsed" FontFamily="FREESCPT.TTF#Freestyle Script" FontSize="43" Foreground="Red" TextWrapping="Wrap" />
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
